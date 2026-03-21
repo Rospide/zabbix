@@ -28,3 +28,32 @@ Para demostrar que el "back-end" está operativo, comprobamos el estado de los s
 1. **Estado de los servicios (Active/Running):**
    ```bash
    sudo systemctl status zabbix-server zabbix-agent apache2 mariadb
+
+2. **Comprobación de puertos (10050 y 10051):**
+   ```bash
+   sudo ss -tulpn | grep zabbix
+
+### Fase 2: Arquitectura de Datos (MariaDB)
+
+Zabbix depende de una estructura robusta para almacenar el histórico. Se demuestra la conexión y estructura de la base de datos:
+
+    Acceso y verificación de tablas:
+
+    sudo mysql -u root -p
+    use zabbix;
+    show tables;
+
+### Fase 3: Monitorización Híbrida (Interfaz Web Zabbix)
+
+Desde http://localhost/zabbix, pasamos a la gestión de la infraestructura en Data collection -> Hosts.
+
+    Nodos por Agente (Verde / ZBX): Se muestran el Zabbix server y el Nodo-Secundario. El estado en verde confirma que el agente local responde correctamente por el puerto 10050 en tiempo        real.
+
+    Nodos por Red (Rojo / SNMP): Se muestra el Router-Principal-SNMP. El estado rojo demuestra el correcto funcionamiento del sistema de alertas (Timeout), ya que verifica la inaccesibilidad     de un dispositivo de red configurado por el puerto 161 sin agente instalado.
+
+
+### Fase 4: Seguridad y Visualización
+
+    Gestión de Macros: Demostración de buenas prácticas de seguridad evitando contraseñas en texto plano. Uso de la macro global {$SNMP_COMMUNITY} con valor public para centralizar credenciales y facilitar la escalabilidad.
+
+    Dashboards Dinámicos: Visualización del panel de control principal mostrando widgets de carga de CPU, uso de memoria y métricas del servidor web Apache, permitiendo la toma de decisiones basada en datos reales.
