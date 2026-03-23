@@ -140,6 +140,34 @@ Data collection -> Hosts. Create host.
 
     Haz clic en el botón azul Add.
 
+
+## cción: Crear el Nodo SNMP en Vivo
+
+Data collection -> Hosts.  Create host.
+
+
+
+    Host name: Escribe Router-Core-SNMP.
+
+    Templates:  Generic by SNMP.
+
+    Host groups: Discovered hosts o Virtual machines.
+
+    Interfaces: Add y selecciona SNMP 
+        IP address: Pon la IP de tu router real o una de prueba como 192.168.1.1.
+
+        Port: 61.
+
+        SNMP version: Deja seleccionada la SNMPv2.
+
+    Pestaña Macros (Súper importante): 
+
+        En el cuadro de la izquierda (Macro), {$SNMP_COMMUNITY}
+
+        En el cuadro de la derecha (Value),  public
+
+    Add.
+
 ## Monitorizar
 
 Ir a monitoring latest data y seleccionar uno que corresponda con el server creado para la demo
