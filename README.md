@@ -139,4 +139,8 @@ Data collection -> Hosts. Create host.
         Deja el puerto en 10050.
 
     Haz clic en el botón azul Add.
+
+## Monitorizar
+
+Ir a monitoring latest data y seleccionar uno que corresponda con el server creado para la demo
     
