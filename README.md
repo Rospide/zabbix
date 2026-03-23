@@ -57,3 +57,49 @@ Desde http://localhost/zabbix, pasamos a la gestión de la infraestructura en Da
     Gestión de Macros: Demostración de buenas prácticas de seguridad evitando contraseñas en texto plano. Uso de la macro global {$SNMP_COMMUNITY} con valor public para centralizar credenciales y facilitar la escalabilidad.
 
     Dashboards Dinámicos: Visualización del panel de control principal mostrando widgets de carga de CPU, uso de memoria y métricas del servidor web Apache, permitiendo la toma de decisiones basada en datos reales.
+
+
+---
+
+## Acción 1: Crear el Servidor de Monitorización (Con Apache)
+
+ Data collection -> Hosts y le das al botón azul Create host.
+
+
+    Host name:  Servidor-Principal-Demo.
+
+    Templates: 
+        Zabbix server health (Para monitorizar el motor interno).
+
+        Linux by Zabbix agent (Para monitorizar la CPU/RAM del sistema operativo).
+
+        Apache by HTTP (Para monitorizar el servicio web).
+
+    Host groups:  Zabbix servers.
+
+    Interfaces: Add -> Agent.
+
+         IP 127.0.0.1 
+
+        Deja el puerto en 10050.
+
+    Haz clic en el botón azul Add.
+
+## Acción 2: Crear el Nodo Normal (Relacionado)
+
+Create host
+
+
+    Host name: Escribe Nodo-Secundario-Demo.
+
+    Templates: Linux by Zabbix agent. 
+
+    Host groups: Linux servers.
+
+    Interfaces: Add -> Agent.
+
+      IP de tu red
+      
+      puerto en 10050.
+
+    
