@@ -120,5 +120,23 @@ Create host
         Márcalo y dale a Select.
 
   
+## Acción: Añadir el Nodo Adicional en Vivo
 
+Data collection -> Hosts. Create host.
+
+
+
+    Host name: Nodo-Adicional-Demo.
+
+    Templates:Linux by Zabbix agent.
+
+    Host groups:  Linux servers.
+
+    Interfaces: Haz clic en Add -> Agent.
+
+        Pon la IP 127.0.0.3 
+
+        Deja el puerto en 10050.
+
+    Haz clic en el botón azul Add.
     
