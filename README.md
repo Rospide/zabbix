@@ -98,8 +98,27 @@ Create host
 
     Interfaces: Add -> Agent.
 
-      IP de tu red
+      127.0.0.2
       
       puerto en 10050.
+
+## Pasos para el Gráfico de RAM:
+
+    Name: poner un nombre
+    Host patterns (El primer recuadro):
+
+        Haz clic en el botón Select.
+
+        En la ventana que se abre, selecciona el grupo (por ejemplo, Zabbix servers o Linux servers) y luego marca tu servidor principal (e.g., Servidor-Principal-Demo).
+
+    Item patterns (El segundo recuadro a la derecha):
+
+        
+
+        Available memory o Memory utilization (dependiendo de la versión exacta de tu template). Si se ve, puedes usar el filtro de arriba buscando "Memory".
+
+        Márcalo y dale a Select.
+
+  
 
     
