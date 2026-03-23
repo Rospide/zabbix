@@ -1,13 +1,13 @@
 # zabbix
 
-# 📊 Implementación de un Sistema de Monitorización con Zabbix
+#  Implementación de un Sistema de Monitorización con Zabbix
 
 **Autor:** Alejandro  
 **Proyecto:** Despliegue, configuración y puesta en marcha de un entorno de monitorización híbrido (Agente + SNMP).
 
 ---
 
-## 🚀 1. Descripción del Proyecto
+##  1. Descripción del Proyecto
 Este repositorio contiene la documentación y el guion de demostración para el despliegue de un servidor Zabbix. El objetivo principal es establecer un sistema capaz de monitorizar tanto servidores Linux (vía Zabbix Agent) como dispositivos de red (vía protocolo SNMP), garantizando la persistencia de datos a través de una base de datos relacional y priorizando la seguridad en las configuraciones.
 
 ### Entorno Técnico:
@@ -18,7 +18,7 @@ Este repositorio contiene la documentación y el guion de demostración para el 
 
 ---
 
-## 💻 2. Guion de la Demostración (Paso a Paso)
+##  2. Guion de la Demostración (Paso a Paso)
 
 A continuación, se detalla el flujo de la demostración técnica en vivo:
 
